@@ -1,14 +1,8 @@
 #!/bin/bash
 
-if [ -z "$1" ]
+if [ "$#" -lt 2 ]
 then
-	echo "Missing name"
-	exit 1
-fi
-
-if [ -z "$2" ]
-then
-	echo "Missing target"
+	echo "Usage: ./$0 <container_name> <host_port>"
 	exit 1
 fi
 
